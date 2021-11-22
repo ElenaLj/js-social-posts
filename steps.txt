@@ -1,0 +1,14 @@
+steps per risolvere l'esercizio
+
+Obiettivo: cerca di creare/usare funzioni + destructuring.
+
+!!! non dare nessun passaggio per scontato, ma pensa a cosa sta facendo javascript !!!
+
+Consegna:
+    Ricrea un feed social aggiungendo al layout di base fornito, il javascript:
+
+    1. Creare array di oggetti che rappresentano ciascun post (già fatto);
+    2. Stampare i post nel feed (crea e usa funzioni);
+    3. Rendere il tasto "Mi piace" cliccabile con incremento del counter a ogni click (usare prevent.Default() perché in HTML c'è il tag <a>)
+    4. Formattare le date in italiano
+    5. Sistemare l'assenza dell'immagine con le iniziali dell'utente
