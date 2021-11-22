@@ -12,3 +12,12 @@ Consegna:
     3. Rendere il tasto "Mi piace" cliccabile con incremento del counter a ogni click (usare prevent.Default() perché in HTML c'è il tag <a>)
     4. Formattare le date in italiano
     5. Sistemare l'assenza dell'immagine con le iniziali dell'utente
+
+
+Passaggio nr. 1/2: 
+    L'array ha 5 oggetti.
+
+    Ogni oggetto ne ha un altro all'interno con le proprietà di nome e immagine (destructuring?) - - non sono capace;
+
+    Devo commentare la parte HTML (√) e inserire tutti questi oggetti con JS (√). 
+    Per farlo uso un ciclo for così JS a ogni giro andrà ad inserirmi ciò che gli scrivo nel ciclo --- > qui però voglio andare ad usare una funzione (guarda come ha fatto Cristina in classe) e cerca di passare degli argomenti alla f.ne per renderla meno intricata (√)--- deve ritornarmi un valore la f.ne (?) --- mentre fai tutto pensa bene allo scope e dove vai a scrivere le variabili!

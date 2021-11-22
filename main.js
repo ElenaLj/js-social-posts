@@ -55,3 +55,58 @@ const posts = [
         "created": "2021-03-05"
     }
 ];
+
+// console.log per vedere cosa contiene l'array
+console.log(posts);
+
+//destructuring 
+// const [{author : {name}}] = posts;
+// console.log(name);
+// ... e ora?
+
+
+for (let i = 0; i < posts.length; i++) {
+    //console.log(posts[i].author.name);
+
+    //invoco la funzione il cui compito è aggiungere elementi
+    post(posts[i]);
+}
+
+
+//questa funzione crea in modo dinamico gli elementi dell'array attraverso un template literal
+function post(post) {
+    const container = document.getElementById("container");
+    container.innerHTML += `
+    <div class="post">
+            <div class="post__header">
+                <div class="post-meta">                    
+                    <div class="post-meta__icon">
+                        <img class="profile-pic" src="${post.author.image}" alt="Phil Mangione">                    
+                    </div>
+                    <div class="post-meta__data">
+                        <div class="post-meta__author">${post.author.name}</div>
+                        <div class="post-meta__time">${post.created}</div>
+                    </div>                    
+                </div>
+            </div>
+            <div class="post__text">
+                Placeat libero ipsa nobis ipsum quibusdam quas harum ut. Distinctio minima iusto. Ad ad maiores et sint     voluptate recusandae architecto. Et nihil ullam aut alias.</div>
+            <div class="post__image">
+                <img src="${post.media}" alt="">
+            </div>
+            <div class="post__footer">
+                <div class="likes js-likes">
+                    <div class="likes__cta">
+                        <a class="like-button  js-like-button" href="#" data-postid="1">
+                            <i class="like-button__icon fas fa-thumbs-up" aria-hidden="true"></i>
+                            <span class="like-button__label">Mi Piace</span>
+                        </a>
+                    </div>
+                    <div class="likes__counter">
+                        Piace a <b id="like-counter-1" class="js-likes-counter">${post.created}</b> persone
+                    </div>
+                </div> 
+            </div>            
+        </div>`;
+};
+
