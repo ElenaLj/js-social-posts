@@ -60,7 +60,7 @@ const posts = [
 console.log(posts);
 
 //destructuring 
-// const [{author : {name}}] = posts;
+const [{author : {name}}] = posts;
 // console.log(name);
 // ... e ora?
 
@@ -70,8 +70,16 @@ for (let i = 0; i < posts.length; i++) {
 
     //invoco la funzione il cui compito è aggiungere elementi
     post(posts[i]);
+
+    // formattazione data
+    // let d = new Date(posts[i].created);
+    // let time = d.getDate().getMonth().getFullYear();
+    // console.log(time);
 }
 
+
+
+// *************************** funzioni
 
 //questa funzione crea in modo dinamico gli elementi dell'array attraverso un template literal
 function post(post) {
@@ -109,4 +117,3 @@ function post(post) {
             </div>            
         </div>`;
 };
-
